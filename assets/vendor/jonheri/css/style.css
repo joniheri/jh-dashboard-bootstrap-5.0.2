@@ -1,13 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-body,
-button {
-  font-family: "Inter", sans-serif;
-} */
-/* body{
-  background: url("https://www.coreitsolutions.net.au/wp-content/uploads/2017/05/Protection-background.-Technology-Security.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 :root {
   --offcanvas-width: 280px;
   --topNavbarHeight: 56px;

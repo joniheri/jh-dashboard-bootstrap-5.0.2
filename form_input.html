@@ -17,6 +17,16 @@
       rel="stylesheet"
       href="./assets/font-awesome-4.7.0/css/font-awesome.min.css"
     />
+    <!-- CSS bootstrap datepicker -->
+    <link
+      rel="stylesheet"
+      href="./assets/vendor/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker.min.css"
+    />
+    <!-- Select2 -->
+    <link
+      rel="stylesheet"
+      href="./assets/vendor/select2/dist/css/select2.min.css"
+    />
     <!-- CSS Custom -->
     <link rel="stylesheet" href="./assets/vendor/jonheri/css/style.css" />
 
@@ -25,8 +35,11 @@
     <!-- JS JQuery -->
     <script src="./assets/vendor/jquery/jquery-3.5.1.js"></script>
     <!-- bootstrap datepicker -->
-    <script src="./assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="./assets/vendor/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
     <!-- JS Custom -->
+
+    <!-- Select2 -->
+    <script src="./assets/vendor/select2/dist/js/select2.full.min.js"></script>
     <script src="./assets/vendor/jonheri/js/script.js"></script>
   </head>
   <body>
@@ -217,10 +230,7 @@
               <div class="collapse" id="transaksi">
                 <ul class="navbar-nav" style="padding-left: 33px">
                   <li>
-                    <a
-                      href="traksaction.html"
-                      class="nav-link px-3 jh-bg-hover"
-                    >
+                    <a href="#" class="nav-link px-3 jh-bg-hover">
                       <i class="fa fa-bar-chart" style="margin-right: 10px"></i>
                       <span>Transaction</span>
                     </a>
@@ -241,31 +251,129 @@
               </div>
               <div class="mb-3"></div>
             </li>
-
-            <!-- <li class="my-2">
-              <hr class="dropdown-divider bg-dark" />
-            </li> -->
           </ul>
         </nav>
       </div>
     </div>
     <!-- End Sidebar -->
 
+    <!-- Box For Margin Bottom -->
+    <div style="height: 60px; width: 100%"></div>
+    <!-- End Box For Margin Bottom -->
+
     <!-- Content -->
-    <main class="mt-5 pt-3 mb-5">
+    <main class="">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12 mt-2 mb-2">
+          <div class="col-md-12">
             <h4>Form Input</h4>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 mb-3">
+          <div class="col-md-6 mb-3">
             <div class="card">
               <div class="card-header">
                 <h6>Date Picker</h6>
               </div>
-              <div class="card-body"></div>
+              <div class="card-body">
+                <div class="input-group mb-3">
+                  <span class="input-group-text">
+                    <i class="fa fa-calendar"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name=""
+                    id="datepicker1"
+                    placeholder="yyyy-mm-dd"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h6>Date Range Picker</h6>
+              </div>
+              <div class="card-body">
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">
+                          <i class="fa fa-calendar"></i>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name=""
+                          id="datepicker2"
+                          placeholder="yyyy-mm-dd"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">
+                          <i class="fa fa-calendar"></i>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name=""
+                          id="datepicker3"
+                          placeholder="yyyy-mm-dd"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h6>Select2</h6>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group mb-2">
+                      <label>Minimal</label>
+                      <select class="form-control select2" style="width: 100%">
+                        <option selected="selected">Alabama</option>
+                        <option>Alaska</option>
+                        <option>California</option>
+                        <option>Delaware</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Washington</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-2">
+                      <label>Multiple</label>
+                      <select
+                        class="form-control select2"
+                        multiple="multiple"
+                        data-placeholder="Select a State"
+                        style="width: 100%"
+                      >
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>California</option>
+                        <option>Delaware</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Washington</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -273,11 +381,39 @@
     </main>
     <!-- End Content -->
 
-    <script>
+    <script type="text/javascript">
+      // datepicker1
       $(function () {
-        $("#datepicker").datepicker({
+        $("#datepicker1").datepicker({
+          format: "yyyy-mm-dd",
           autoclose: true,
-          format: "yyyy/mm/dd",
+          todayHighlight: true,
+          maxViewMode: 4,
+          todayBtn: "linked",
+        });
+      });
+
+      // datepicker2
+      $(function () {
+        $("#datepicker2").datepicker({
+          format: "yyyy-mm-dd",
+          autoclose: true,
+          todayHighlight: true,
+        });
+      });
+
+      // datepicker3
+      $(function () {
+        $("#datepicker3").datepicker({
+          format: "yyyy-mm-dd",
+          autoclose: true,
+          todayHighlight: true,
+        });
+      });
+
+      $(function () {
+        $(".select2").select2({
+          // autoclose: true,
         });
       });
     </script>
