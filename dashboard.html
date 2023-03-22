@@ -12,9 +12,16 @@
     />
     <link
       rel="stylesheet"
-      href="./assets/icon-fontawesome-pro-5.15/css/all.min.css"
+      href="./assets/font-awesome-4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./assets/vendor/jonheri/css/style.css" />
+
+    <!-- JS Bootstrap -->
+    <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS JQuery -->
+    <script src="./assets/vendor/jquery/jquery-3.5.1.js"></script>
+    <!-- JS Custom -->
+    <script src="./assets/vendor/jonheri/js/script.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -64,30 +71,29 @@
               <ul class="dropdown-menu dropdown-menu-end">
                 <li>
                   <a class="dropdown-item" href="#">
-                    <i class="fal fa-user-cog" style="margin-right: 10px"></i>
+                    <i class="fa fa-user" style="margin-right: 10px"></i>
                     <span>Profile</span>
                   </a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#">
-                    <i class="fal fa-tools" style="margin-right: 10px"></i>
+                    <i
+                      class="fa fa-pencil-square"
+                      style="margin-right: 10px"
+                    ></i>
                     <span>Change Password</span>
                   </a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#">
-                    <i
-                      class="fal fa-info-circle"
-                      style="margin-right: 10px"
-                    ></i>
+                    <i class="fa fa-info-circle" style="margin-right: 10px"></i>
                     <span>About This App</span>
                   </a>
                 </li>
                 <hr class="dropdown-divider bg-dark" />
                 <li>
                   <a class="dropdown-item" href="index.html">
-                    <i class="fal fa-sign-out-alt" style="margin-right: 10px">
-                    </i>
+                    <i class="fa fa-sign-out" style="margin-right: 10px"> </i>
                     <span>Logout</span>
                   </a>
                 </li>
@@ -137,11 +143,11 @@
               </div>
             </li>
             <li>
-              <a href="#" class="nav-link px-3 jh-bg-hover jh-bg-active">
-                <i
-                  class="fal fa-tachometer-alt-slowest"
-                  style="margin-right: 10px"
-                ></i>
+              <a
+                href="dashboard.html"
+                class="nav-link px-3 jh-bg-hover jh-bg-active"
+              >
+                <i class="fa fa-dashboard" style="margin-right: 10px"></i>
                 <span>Dashboard</span>
               </a>
             </li>
@@ -151,32 +157,31 @@
                 data-bs-toggle="collapse"
                 href="#dataMaster"
               >
-                <i class="fal fa-server" style="margin-right: 16px"></i>
+                <i class="fa fa-server" style="margin-right: 16px"></i>
                 <span>Data Master</span>
                 <span class="ms-auto">
                   <span class="right-icon">
-                    <i class="fas fa-chevron-down" style="opacity: 60%"></i>
+                    <i class="fa fa-chevron-down" style="opacity: 60%"></i>
                   </span>
                 </span>
               </a>
-              <div class="collapse" id="dataMaster">
+              <div id="dataMaster" class="collapse">
                 <ul class="navbar-nav" style="padding-left: 33px">
                   <li>
                     <a href="tables.html" class="nav-link px-3 jh-bg-hover">
-                      <i class="fal fa-table" style="margin-right: 10px"></i>
+                      <i class="fa fa-table" style="margin-right: 10px"></i>
                       <span>Tables</span>
                     </a>
                   </li>
                   <li>
                     <a href="icons.html" class="nav-link px-3 jh-bg-hover">
-                      <i class="fal fa-icons" style="margin-right: 10px"></i>
+                      <i class="fa fa-fonticons" style="margin-right: 10px"></i>
                       <span>Icons</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="nav-link px-3 jh-bg-hover">
-                      <i class="fal fa-keyboard" style="margin-right: 10px">
-                      </i>
+                    <a href="form_input.html" class="nav-link px-3 jh-bg-hover">
+                      <i class="fa fa-file" style="margin-right: 10px"> </i>
                       <span>Form Input</span>
                     </a>
                   </li>
@@ -192,34 +197,34 @@
                 data-bs-toggle="collapse"
                 href="#transaksi"
               >
-                <i class="fas fa-chart-bar" style="margin-right: 16px"></i>
+                <i class="fa fa-bar-chart" style="margin-right: 16px"></i>
                 <span>Transaction</span>
                 <span class="ms-auto">
                   <span class="right-icon">
-                    <i class="fas fa-chevron-down" style="opacity: 60%"></i>
+                    <i class="fa fa-chevron-down" style="opacity: 60%"></i>
                   </span>
                 </span>
               </a>
               <div class="collapse" id="transaksi">
                 <ul class="navbar-nav" style="padding-left: 33px">
                   <li>
-                    <a href="#" class="nav-link px-3 jh-bg-hover">
-                      <i
-                        class="fal fa-chart-bar"
-                        style="margin-right: 10px"
-                      ></i>
+                    <a
+                      href="traksaction.html"
+                      class="nav-link px-3 jh-bg-hover"
+                    >
+                      <i class="fa fa-bar-chart" style="margin-right: 10px"></i>
                       <span>Transaction</span>
                     </a>
                   </li>
                   <li>
                     <a href="#" class="nav-link px-3 jh-bg-hover">
-                      <i class="fal fa-hammer" style="margin-right: 10px"></i>
+                      <i class="fa fa-gear" style="margin-right: 10px"></i>
                       <span>Access Management</span>
                     </a>
                   </li>
                   <li>
                     <a href="#" class="nav-link px-3 jh-bg-hover">
-                      <i class="fal fa-bars" style="margin-right: 10px"></i>
+                      <i class="fa fa-bars" style="margin-right: 10px"></i>
                       <span>Another Menu</span>
                     </a>
                   </li>
@@ -227,6 +232,10 @@
               </div>
               <div class="mb-3"></div>
             </li>
+
+            <!-- <li class="my-2">
+              <hr class="dropdown-divider bg-dark" />
+            </li> -->
           </ul>
         </nav>
       </div>
@@ -290,10 +299,5 @@
       </div>
     </main>
     <!-- End Content -->
-
-    <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/icon-fontawesome-pro-5.15/js/all.min.js"></script>
-    <script src="./assets/vendor/jquery/jquery-3.5.1.js"></script>
-    <script src="./assets/vendor/jonheri/js/script.js"></script>
   </body>
 </html>
